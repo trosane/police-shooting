@@ -19,17 +19,63 @@
     <!-- Custom files -->
     <script type="text/javascript" src="js/map.js"></script>
     <link rel="stylesheet" href="css/main.css"/>
+    <script src='https://api.mapbox.com/mapbox.js/v2.2.2/mapbox.js'></script>
+	  <link href='https://api.mapbox.com/mapbox.js/v2.2.2/mapbox.css' rel='stylesheet' />
    
   </head>
   <body>
     <!-- You may want to put your title and additional informaiton here -->
+    <h1>Police Shootings</h1>
     <div class="container">
-      <!-- This is the div that your map will go in.  You'll need to reference its id -->
-      <div id="container"></div>
+      <div class="row">
+        <div class="col-lg-12">
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th> </th>
+              <th>Age &lt; 40</th>
+              <th>Age &gt; 40</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">Gun</th>
+              <td id="gunLow"></td>
+              <td id="gunHigh"></td>
+            </tr>
+            <tr>
+              <th scope="row">Other</th>
+                <td id="otherLow"></td>
+                <td id="otherHigh"></td>
+            </tr>
+          </tbody>
+        </table>
+        </div>
+      </div>  
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <p>This map shows crowdsourced police shooting data from <a href="http://regressing.deadspin.com/deadspin-police-shooting-database-update-were-still-go-1627414202">deadspin</a>. The color of each circle indicates which type of weapon the victim was armed with when they were shot: <span id="gun">gun</span>, <span id="knife">knife</span>, <span id="blunt">blunt object</span>, <span id="vehicle">vehicle</span> or <span id="other">other</span>. The table above counts the number of cases where people are a certain age and what weapon they had. Click the icon in the top-right of the map to filter by weapons.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="well">
+      <div class="container" id="map-container">
+        <div class="row">
+          <div class="col-lg-12">
+            <div id="crime-map"></div>
+          </div>
+        </div>
+        <!-- This is the div that your map will go in.  You'll need to reference its id -->
+      </div>
     </div>
     <script>
       
       // This is where you should execute your drawMap function
+      drawMap();
       
     </script>
   </body>

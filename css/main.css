@@ -1,4 +1,37 @@
 /* You'll probably want to add some styles here */
-#container {
-	height:800px;
+#map-container {
+	height:100%;
+}
+
+#crime-map {
+	height: 80vh;
+	width: 80vw;
+}
+
+h1 {
+	text-align: center;
+}
+
+p {
+	text-align: center;
+}
+
+#gun {
+	color: black;
+}
+
+#knife {
+	color: red;
+}
+
+#blunt {
+	color: orange;
+}
+
+#vehicle {
+	color: green;
+}
+
+#other {
+	color: blue;
 }
